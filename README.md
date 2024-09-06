@@ -6,7 +6,7 @@ Mock Data Setup is already present at start of Application
 
 There are two APIs in this service
 
-**One to Persist Customer and Address info (Address belongs to customer)**
+_**One to Persist Customer and Address info (Address belongs to customer)**_
 
 **Curl**
 
