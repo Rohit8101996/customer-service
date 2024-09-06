@@ -27,10 +27,9 @@ public class CustomerController implements CustomerApi {
     }
 
     @Override
-    public ResponseEntity<List<CustomerResponseDto>> getCustomersList(
-            String name,
-            String city,
-            String state) {
+    public ResponseEntity<List<CustomerResponseDto>> getCustomersList(String name,
+                                                                      String city,
+                                                                      String state) {
         CustomerSearchRequest customerSearchRequest =
                 CustomerSearchRequest.builder()
                         .name(name)
