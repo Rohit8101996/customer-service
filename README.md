@@ -34,6 +34,14 @@ _**One to Persist Customer and Address info (Address belongs to customer)**_
 }'
 `
 
+Note :
+
+This is also publishing the message via Kafka Producer to a topic named **customer-process**
+Either comment out line
+**kafkaProducer.sendMessage(savedCustomer);** or have Zookeeper and Broker running at port 9092 to run this API
+ -------------------------------------------------------------------------------------------
+
+
 **_Another to get Customers List(No Filter/ Filter by one param/ filter by multiple param)
 i.e., name, city and state_**
 
@@ -42,3 +50,14 @@ i.e., name, city and state_**
 Import Curl on PostMan
 
 `curl --location --request GET 'localhost:8080/customer/list?name=PM&city=Ba&state=New'`
+
+To view DB
+
+Login to H2 Console
+http://localhost:8080/h2-console
+
+* JDBC URL : jdbc:h2:mem:mydb
+* UserName : rohit
+* password: rohit
+
+![img.png](img.png)

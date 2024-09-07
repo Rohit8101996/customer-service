@@ -1,6 +1,7 @@
 package com.rohitbaranwal.customerservice.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -14,6 +15,7 @@ import java.util.UUID;
 @Entity
 @Table(name = "address")
 @ToString(exclude = "customer")
+@JsonIgnoreProperties({"customer"})
 public class Addresses implements Serializable {
 
     @Id

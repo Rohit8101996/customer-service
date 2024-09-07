@@ -87,8 +87,10 @@ public class MockDataSetupConfiguration implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
+        log.info("Mock Data Setup Started...");
         generateCustomers(5);
-        log.info("Mock Data Setup");
+        log.info("Mock Data Setup Completed...");
+
     }
 
     private void generateCustomers(int numberOfCustomers) {
