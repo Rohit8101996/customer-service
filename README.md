@@ -61,3 +61,27 @@ http://localhost:8080/h2-console
 * password: rohit
 
 ![img.png](img.png)
+
+Some Important small facts
+Extend auditable data from customer entity to capture audit logs.
+
+AuditableData class should have @MappedSuperClass since it is Base Entity .BaseEntityClass are entity which dont have
+tbl of its own but have coloumn names used by other classes . They hold common properites of multiple entity class.
+which is extended by other entities .It is provided by JAKARTA Persistence
+
+Super Builder is used with Customer class becuase it extends Auditable Data and to initialize data with audit in
+customer @super builder is used
+
+@JsonIdentityInfo is an annotation provided by the Jackson library, which is a popular JSON processing library in Java.
+This annotation is used to handle circular references or self-references in JSON serialization and deserialization.
+
+@JsonManagedReference and @JsonBackReference
+Purpose:
+
+Used to manage bidirectional relationships in object graphs, specifically to handle serialization and deserialization of
+these relationships to avoid infinite recursion.
+Usage:
+
+@JsonManagedReference is used on the "forward" part of the reference (the part that is serialized normally).
+@JsonBackReference is used on the "back" part of the reference (the part that should not be serialized to avoid
+recursion).

@@ -2,9 +2,9 @@ package com.rohitbaranwal.customerservice.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 import java.io.Serializable;
 import java.util.List;
@@ -14,9 +14,9 @@ import java.util.UUID;
 @Table(name = "customer")
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 @Data
-public class Customer implements Serializable {
+@SuperBuilder
+public class Customer extends AuditableData implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
